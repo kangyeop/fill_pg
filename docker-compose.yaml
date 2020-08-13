@@ -1,0 +1,9 @@
+version: "3"
+
+services:
+  history_tools:
+    image: eosio/eosio-explorer:fill-pg-1.2
+    container_name: history_tools
+    user: ${UID}
+    env_file: .env
+    command: ./build/fill-pg --fpg-create --ignore-onblock --remove_old_delta_row --dbstring="hostaddr=${POSTGRES_HOST} port=${POSTGRES_PORT}" --fill-connect-to ${LEDGIS_ENDPOINT}
