@@ -6,6 +6,7 @@ services:
     container_name: postgres
     ports:
       - "${POSTGRES_PORT}:5432"
+    env_file: .env
     environment:
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
       PGDATA: /var/lib/postgresql/data/pgdata
