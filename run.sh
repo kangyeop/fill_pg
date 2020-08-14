@@ -2,7 +2,7 @@
 
 function usage() {
     printf "Usage: $0 OPTION...
-    -d          fill pg 종료
+    -p          postgres 시작
     -i          초기 시작(테이블 스키마 생성)
     -I          테이블 전부 삭제 후 재시작(테이블 스키마 삭제 후 재생성)
     -s          block number, block number까지 스킵하고 fill-pg 실행
